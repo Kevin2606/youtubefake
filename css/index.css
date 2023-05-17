@@ -1,0 +1,260 @@
+html {
+    font-size: 16px;
+}
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+#modo_oscuro{
+    cursor:pointer;
+    
+}
+/*BUSCADOR*/
+#container_buscador {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#input_group_span {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+#container_buscador img {
+    height: 2rem;
+}
+
+#input_group_search {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#container_buscador_lupa {
+    background-color: #fff;
+    position: absolute;
+    left: 1.25rem;
+    z-index: 1;
+}
+
+#input_group_search input[type="text"] {
+    height: 3rem;
+    padding: 0 3rem;
+    font-size: 16px;
+    border-radius: 2rem;
+    z-index: 2;
+}
+#container_buscador input[type="text"]:focus {
+    border-color: red;
+    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.5);
+    z-index: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#ul_search{
+    display: none;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    top: 3rem;
+    left: 0px;
+    width: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #fff;
+    border:1px solid red;
+    box-shadow: 0px 2px 5px 2px rgba(255, 0, 0, 0.5);
+    border-top: none;
+    z-index: 3;
+    overflow: hidden;
+    color: black;
+}
+#ul_search li {
+    padding: .3rem .8rem;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: left;
+}
+#ul_search li:hover{
+    background-color: #ccc;
+    cursor: pointer;
+
+} 
+#ul_search li img{
+    margin-right: .5rem;
+}
+#ul_search li p{
+    margin: 0;
+}
+
+#container_home {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#container_section_videos {
+    display: flex;
+    flex-direction: column;
+}
+
+/*VIDEO IZQUIERDA*/
+#container_video {
+    margin: .5rem 0;
+}
+
+#container_video div {
+    background-color: grey;
+    height: 50vh;
+    width: 70vw;
+}
+#container_video div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#container_video h3 {
+    margin: 1rem 0;
+    padding: 0 0 .5rem 0;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+}
+
+#container_video_relacionados_section {
+    display: flex;
+    flex-direction: column;
+}
+
+#container_video_relacionados_section {
+    text-align: center;
+}
+#container_videos_relacionados {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: .5rem;
+}
+.video_relacionado {
+    background-color: grey;
+    flex: 0 0 auto;
+    width: 13.5vw;
+    height: 12rem;
+    margin: 0 .5rem;
+}
+/*INFO DERECHA*/
+#container_info {
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+#container_info_canal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+}
+
+#container_info_comentarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-bottom: 6vh;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1.5rem;
+}
+
+#container_info_comentarios h4 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#container_comments {
+    height: 35vh;
+    overflow-y: auto;
+}
+
+.card_comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    width: 18vw;
+}
+
+.card_comments div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.card_comments div img {
+    height: 2rem;
+}
+
+.card_comments div h5 {
+    margin-left: 1rem;
+}
+
+.card_comments p {
+    margin-top: .8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#container_info_descripcion h5{
+    text-align: center;
+}
+#container_info_descripcion p{
+    height: 14rem;
+    text-align: left;
+    overflow-y: auto;
+}
+.videos_related_selected:hover{
+    cursor: pointer;
+}
+
+/*Barra de desplazamiento vertical*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+/* Cambiar el color del riel (track) */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Cambiar el color del pulgar (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 20px;
+
+}
+
+/* Cambiar el color del pulgar al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
